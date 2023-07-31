@@ -2,7 +2,7 @@
 names=`ls /Volumes |grep -v Mac`
 base="/Volumes"
 mkdir $base
-tmpFile="/tmp/tmp.txt"
+tmpFile="/tmp/ntfs.txt"
 echo $tmpFile
 sudo echo ""> $tmpFile
 vo=""
@@ -26,4 +26,5 @@ do
     #sudo mount_ntfs -o rw,nobrowse ${l##*:} $base/${l%%:*}
 	sudo /usr/local/sbin/mount_ntfs ${l##*:} $base/${l%%:*}
 done
+sleep 3
 open /Volumes

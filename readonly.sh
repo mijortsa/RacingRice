@@ -2,7 +2,7 @@
 names=`ls /Volumes |grep -v Mac`
 base="/Volumes"
 mkdir $base
-tmpFile="/tmp/tmp.txt"
+tmpFile="/tmp/ntfs.txt"
 echo $tmpFile
 sudo echo ""> $tmpFile
 vo=""
@@ -24,4 +24,5 @@ for l in `cat $tmpFile`
 do
 	diskutil mount ${l%%:*}
 done
+sleep 3
 open /Volumes

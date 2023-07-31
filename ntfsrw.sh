@@ -23,7 +23,6 @@ for l in `cat $tmpFile`
 do
 	echo $l
     sudo mkdir $base/${l%%:*}
-    #sudo mount_ntfs -o rw,nobrowse ${l##*:} $base/${l%%:*}
 	sudo /usr/local/sbin/mount_ntfs ${l##*:} $base/${l%%:*}
 done
 sleep 3

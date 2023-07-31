@@ -3,8 +3,8 @@ names=`ls /Volumes |grep -v Mac`
 base="/Volumes"
 mkdir $base
 tmpFile="/tmp/ntfs.txt"
-echo $tmpFile
-sudo echo ""> $tmpFile
+#echo $tmpFile
+#sudo echo ""> $tmpFile
 vo=""
 for name in $names
 do

@@ -22,7 +22,7 @@ done
 for l in `cat $tmpFile`
 do
 	echo $l
-    sudo mkdir $base/${l%%:*}
+	sudo mkdir $base/${l%%:*}
 	sudo /usr/local/sbin/mount_ntfs ${l##*:} $base/${l%%:*}
 done
 sleep 3
